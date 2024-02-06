@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 import { ConfigModule } from '@nestjs/config';
+import { PromoModule } from './promo/promo.module';
 
 
 @Module({
@@ -10,6 +11,7 @@ import { ConfigModule } from '@nestjs/config';
     ConfigModule.forRoot({
       envFilePath: '.env',
     }),
+    PromoModule,
   ],
   controllers: [AppController],
   providers: [AppService],
